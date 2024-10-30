@@ -24,5 +24,37 @@ public class Recursividad {
 
         return (n+sumaConsecutivos(n-1));
     }
+
+    //calcular la potencia de numero
+
+    public int potencia (int base, int exponente){
+        if (exponente  == 0){
+            return 1;
+        }
+        return base * potencia(base, exponente-1);
+        
+    }
     
+    //CREAR UN METODO QUE SUME LOS DIGITOS DE UN NUMERO
+    //SI MANDO 456 SEA IGUAL A 15
+    // 4 + 5 + 6 =15
+    //PISTA DE USA EL % MOD
+    public int sumaDigitos (int n){
+        if(n<10){
+            return n;
+        }
+        return n % 10 +sumaDigitos(n/10);
+
+
+    }
+
+    public int fibonacci (int n){
+        if(n == 0) return 0;
+
+        if(n == 1) return 1;
+
+        return fibonacci(n-1) + fibonacci(n-2);
+
+        
+    }
 }
